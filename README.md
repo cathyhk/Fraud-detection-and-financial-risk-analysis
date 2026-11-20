@@ -59,3 +59,34 @@ This makes it easier to see how the model is performing and where higher-risk tr
 The analysis showed that transaction data can provide useful signals for identifying potentially fraudulent activity.The final model was able to identify a meaningful proportion of fraudulent transactions while maintaining reasonably high precision. The results also showed why threshold selection matters in fraud detection, where missing fraudulent transactions and incorrectly flagging legitimate transactions both have consequences.In a real world setting the model would work alongside existing fraud rules and human review rather than being used as the only decision making system. Regular monitoring and retraining would also be important as fraud patterns change over time.
 ## Project Outcome
 The final solution provides a practical approach for identifying potentially fraudulent transactions and prioritizing higher-risk cases for further investigation
+## Fraud Risk Dashboard
+
+The dashboard brings the main results together and gives a quick view of transaction risk and model performance.
+
+![Fraud Risk Dashboard](fraud-risk-dashboard.png)
+
+### Final Model Performance
+
+The optimized HistGradientBoosting model achieved:
+
+- **Accuracy:** 98%
+- **Fraud Precision:** 72.7%
+- **Fraud Recall:** 50.0%
+- **Fraud F1-Score:** 59.2%
+- **ROC-AUC:** 0.914
+
+The model was also used to group transactions into **Low, Medium, High, and Critical Risk** categories based on their predicted fraud probability.
+
+## Key Findings
+
+- The final model was able to distinguish fraudulent transactions from legitimate transactions with a ROC-AUC of 0.914.
+- Threshold optimization improved fraud recall while maintaining reasonable precision.
+- Transaction and identity-related features were among the most important predictors of fraud risk.
+- The model identified different levels of transaction risk, from Low Risk to Critical Risk.
+- The dashboard provides a simple way to review predicted fraud and prioritize higher-risk transactions for further investigation.
+
+## Project Outcome
+
+This project demonstrates how transaction data can be used to build a practical fraud detection and financial risk analysis solution using Python, SQL and machine learning.
+
+The final model can help organizations identify potentially fraudulent transactions and focus investigation efforts on higher-risk cases.
